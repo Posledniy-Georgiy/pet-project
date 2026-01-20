@@ -54,3 +54,4 @@ func death():
 	anim.play("death")
 	await anim.animation_finished
 	queue_free()
+wasd
