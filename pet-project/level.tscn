@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://dl668vljhn1px"]
 
+[ext_resource type="Script" uid="uid://dq6qweu0nsctp" path="res://level.gd" id="1_n6hdu"]
 [ext_resource type="PackedScene" uid="uid://f32sbak56xdh" path="res://player.tscn" id="1_u52ul"]
 [ext_resource type="Texture2D" uid="uid://cpw0uddvnvbqa" path="res://textures/background/background_layer_1.png" id="2_f2txt"]
 [ext_resource type="Texture2D" uid="uid://cru156kypc2n6" path="res://textures/background/background_layer_2.png" id="3_1ainy"]
+[ext_resource type="PackedScene" uid="uid://bfpp6f7x7v4fv" path="res://build/shop.tscn" id="4_1ainy"]
 [ext_resource type="Texture2D" uid="uid://6i6kjejakvi1" path="res://textures/background/background_layer_3.png" id="4_n6hdu"]
 [ext_resource type="Texture2D" uid="uid://fxlh6p2b1401" path="res://textures/oak_woods_tileset.png" id="5_km5ld"]
+[ext_resource type="Texture2D" uid="uid://cydoab82jh2hv" path="res://textures/decorations/circle.png" id="8_km5ld"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2t4f"]
 texture = ExtResource("5_km5ld")
@@ -493,9 +496,14 @@ var gold = preload(\"res://gold.tscn\")
 	
 "
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_km5ld"]
+polygon = PackedVector2Array(-5010, 573, -5010, 658, 5011, 657, 5010, 575)
+
 [node name="level" type="Node2D" unique_id=105628834]
+script = ExtResource("1_n6hdu")
 
 [node name="BG" type="ParallaxBackground" parent="." unique_id=141951335]
+layer = -1
 offset = Vector2(0, 250)
 scale = Vector2(0.4, 0.4)
 transform = Transform2D(0.4, 0, 0, 0.4, 0, 250)
@@ -526,6 +534,9 @@ position = Vector2(574.1111, 324.50003)
 scale = Vector2(3.5944443, 3.5944445)
 texture = ExtResource("4_n6hdu")
 
+[node name="shop" parent="." unique_id=427251687 instance=ExtResource("4_1ainy")]
+position = Vector2(61, 518)
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1605678528]
 tile_set = SubResource("TileSet_8cye3")
 format = 2
@@ -534,7 +545,7 @@ layer_0/tile_data = PackedInt32Array(2359296, 131072, 2, 2424832, 131072, 2, 249
 [node name="player" type="Node2D" parent="." unique_id=1322294072]
 
 [node name="player" parent="player" unique_id=1276501645 instance=ExtResource("1_u52ul")]
-position = Vector2(175, 522)
+position = Vector2(178, 491)
 
 [node name="mobs" type="Node2D" parent="." unique_id=454714043]
 
@@ -564,3 +575,25 @@ script = SubResource("GDScript_km5ld")
 [node name="Timer" type="Timer" parent="lut" unique_id=1534303634]
 wait_time = 3.0
 autostart = true
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=475247908]
+energy = 0.95
+blend_mode = 1
+range_layer_min = -1
+
+[node name="DayNight" type="Timer" parent="." unique_id=35076487]
+wait_time = 30.0
+autostart = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=262632819]
+position = Vector2(13.999999, 533.99994)
+scale = Vector2(0.3575, 0.3575)
+color = Color(0.972549, 0.8, 0.6666667, 1)
+energy = 1.5
+shadow_enabled = true
+texture = ExtResource("8_km5ld")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1400385820]
+occluder = SubResource("OccluderPolygon2D_km5ld")
+
+[connection signal="timeout" from="DayNight" to="." method="_on_day_night_timeout"]

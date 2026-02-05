@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b3ld33gyctnn4" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dxlkaglugqy1h" path="res://textures/blue/char_blue_1.png" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://ckgbj15fw6moa" path="res://textures/blue/char_blue_2.png" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cydoab82jh2hv" path="res://textures/decorations/circle.png" id="5_sweqy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sh265"]
 
@@ -1011,6 +1012,9 @@ _data = {
 &"walk": SubResource("Animation_u1c27")
 }
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sweqy"]
+polygon = PackedVector2Array(8, 13, 8, 12, -7, 11, -7, 13)
+
 [node name="player" type="CharacterBody2D" unique_id=465054185]
 position = Vector2(-1, 0)
 script = ExtResource("1_onrkg")
@@ -1035,3 +1039,12 @@ drag_horizontal_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=129495627]
 libraries/ = SubResource("AnimationLibrary_vihdy")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=209542393]
+position = Vector2(-1, -7.9412346)
+scale = Vector2(0.063125, 0.07985309)
+energy = 0.5
+texture = ExtResource("5_sweqy")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=254862929]
+occluder = SubResource("OccluderPolygon2D_sweqy")
