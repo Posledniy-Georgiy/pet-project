@@ -625,6 +625,18 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_hqtel"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
 
 [sub_resource type="Animation" id="Animation_sweqy"]
 length = 0.6
@@ -652,6 +664,20 @@ tracks/1/keys = {
 "update": 1,
 "values": ["attack"]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"combo1"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_2hs0m"]
 length = 0.3
@@ -678,6 +704,20 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": ["attack2"]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.16666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"combo1"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_1jxqw"]
@@ -981,9 +1021,8 @@ shape = SubResource("CapsuleShape2D_sh265")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1306113656]
 position = Vector2(2, -15)
 sprite_frames = SubResource("SpriteFrames_4flbx")
-animation = &"death"
+animation = &"attack"
 autoplay = "idle"
-frame = 11
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1365538400]
 zoom = Vector2(2.4, 2.4)

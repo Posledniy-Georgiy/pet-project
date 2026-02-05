@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770072450
+::res://::1770324380
 bG.gd::GDScript::9187485916372710519::1770069930::0::1::::<>ParallaxBackground<><>0<>0<><>::
 bg.tscn::PackedScene::6830551770268178598::1770069930::0::1::::<><><>0<>0<><>::uid://cpw0uddvnvbqa::::res://textures/background/background_layer_1.png<>uid://d35qsywb5nqgd::::res://bG.gd<>uid://cru156kypc2n6::::res://textures/background/background_layer_2.png<>uid://6i6kjejakvi1::::res://textures/background/background_layer_3.png
 gold.gd::GDScript::244699171426334798::1770069930::0::1::::<>Area2D<><>0<>0<><>::
@@ -8,10 +8,16 @@ icon.svg::CompressedTexture2D::9078742994855788999::1770069930::1770070078::1:::
 level.tscn::PackedScene::7997277319850150709::1770071636::0::1::::<><><>0<>0<><>::uid://f32sbak56xdh::::res://player.tscn<>uid://cpw0uddvnvbqa::::res://textures/background/background_layer_1.png<>uid://cru156kypc2n6::::res://textures/background/background_layer_2.png<>uid://6i6kjejakvi1::::res://textures/background/background_layer_3.png<>uid://fxlh6p2b1401::::res://textures/oak_woods_tileset.png
 menu.gd::GDScript::1132138547834836150::1770069930::0::1::::<>Node2D<><>0<>0<><>::
 menu.tscn::PackedScene::6712426854204172824::1770069930::0::1::::<><><>0<>0<><>::uid://qeofk5du4o43::::res://menu.gd<>uid://c4k1gpj8hwb6e::::res://bg.tscn
-player.gd::GDScript::4374650095076817475::1770071636::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::410418351417857889::1770072405::0::1::::<><><>0<>0<><>::uid://einl6ojnvs1m::::res://textures/character/char_blue.png<>uid://b3ld33gyctnn4::::res://player.gd<>uid://dxlkaglugqy1h::::res://textures/blue/char_blue_1.png<>uid://ckgbj15fw6moa::::res://textures/blue/char_blue_2.png
+player.gd::GDScript::4374650095076817475::1770075726::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::410418351417857889::1770075726::0::1::::<><><>0<>0<><>::uid://einl6ojnvs1m::::res://textures/character/char_blue.png<>uid://b3ld33gyctnn4::::res://player.gd<>uid://dxlkaglugqy1h::::res://textures/blue/char_blue_1.png<>uid://ckgbj15fw6moa::::res://textures/blue/char_blue_2.png
 skelet.gd::GDScript::7581081757121099899::1770069930::0::1::::<>CharacterBody2D<><>0<>0<><>::
 skelet.tscn::PackedScene::6252882565177268637::1770069930::0::1::::<><><>0<>0<><>::uid://dgalkregd84eh::::res://skelet.gd<>uid://c003euy845dkx::::res://textures/Skeleton/Take Hit.png<>uid://brtpvbxt7vh31::::res://textures/Skeleton/Death.png<>uid://ccc1c03kmepju::::res://textures/Skeleton/Idle.png<>uid://bafwps38v8qbk::::res://textures/Skeleton/Walk.png
+::res://addons/::1770073207
+::res://addons/AS2P/::1770073207
+InspectorConvertor.gd::GDScript::665031396324041102::1770073207::0::1::::<>EditorInspectorPlugin<><>0<>1<><>::
+NodeSelectorProperty.gd::GDScript::5658407128067462530::1770073207::0::1::::<>EditorProperty<><>0<>1<><>::
+plugin.cfg::TextFile::-1::1770073207::0::1::::<><><>0<>0<><>::
+plugin.gd::GDScript::2459713161603175874::1770073207::0::1::::<>EditorPlugin<><>0<>1<><>::
 ::res://textures/::1770071851
 MonedaD.png::CompressedTexture2D::793494230500714664::1770069930::1770070078::1::::<><><>0<>0<>4c49b71e304fd792bacaccb559f08ff8<>res://.godot/imported/MonedaD.png-43b8c6f87b4dda2ed09a3ba6109cf992.ctex::
 oak_woods_tileset.png::CompressedTexture2D::399106946636371936::1770069930::1770070078::1::::<><><>0<>0<>dee45fca9b50eaf5d09872b2ca3aedb8<>res://.godot/imported/oak_woods_tileset.png-85f50b5ed2447e158862a1627ed166e3.ctex::
