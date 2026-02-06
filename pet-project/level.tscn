@@ -554,8 +554,8 @@ position = Vector2(178, 491)
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=683132369]
 offset_left = 33.0
 offset_top = 31.0
-offset_right = 113.0
-offset_bottom = 75.0
+offset_right = 89.0
+offset_bottom = 73.0
 theme_override_font_sizes/font_size = 30
 text = "HP"
 script = SubResource("GDScript_1ainy")
@@ -568,6 +568,14 @@ offset_bottom = 108.0
 theme_override_font_sizes/font_size = 30
 text = "gold"
 script = SubResource("GDScript_n6hdu")
+
+[node name="DayText" type="Label" parent="CanvasLayer" unique_id=1975185363]
+offset_left = 534.0
+offset_top = 135.0
+offset_right = 594.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 30
+text = "DAY - 1"
 
 [node name="lut" type="Node2D" parent="." unique_id=1505340269]
 script = SubResource("GDScript_km5ld")
@@ -582,7 +590,7 @@ blend_mode = 1
 range_layer_min = -1
 
 [node name="DayNight" type="Timer" parent="." unique_id=35076487]
-wait_time = 30.0
+wait_time = 20.0
 autostart = true
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=262632819]

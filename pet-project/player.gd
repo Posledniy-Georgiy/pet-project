@@ -96,8 +96,8 @@ func block_state():
 	animPlayer.play("block")
 	if Input.is_action_just_released("block"):
 		state = MOVE
-	
-	
+
+
 func slide_state():
 	animPlayer.play("slide")
 	await animPlayer.animation_finished
@@ -112,6 +112,7 @@ func attack_state():
 	await animPlayer.animation_finished
 	attack_freeze()
 	state = MOVE
+
 
 func attack2_state():
 	if Input.is_action_just_pressed("attack") and combo == true:
@@ -137,4 +138,3 @@ func attack_freeze():
 	attack_cooldown = true
 	await get_tree().create_timer(0.5).timeout
 	attack_cooldown = false
-	
