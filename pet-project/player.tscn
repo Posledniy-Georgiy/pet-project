@@ -1017,6 +1017,7 @@ polygon = PackedVector2Array(8, 13, 8, 12, -7, 11, -7, 13)
 
 [node name="player" type="CharacterBody2D" unique_id=465054185]
 position = Vector2(-1, 0)
+collision_layer = 2
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1524672844]

@@ -3,6 +3,7 @@ extends Node2D
 @onready var light = $DirectionalLight2D
 @onready var pointLight = $PointLight2D
 @onready var day_text = $CanvasLayer/DayText
+@onready var animPlayer = $CanvasLayer/AnimationPlayer
 
 enum{
 	MORNING,
@@ -19,6 +20,7 @@ func _ready() -> void:
 	light.enabled = true
 	day_count = 1
 	set_day_text()
+	day_text_fade()
 
 
 func morning_state():
@@ -47,6 +49,13 @@ func _on_day_night_timeout() -> void:
 		state = MORNING
 		day_count += 1
 		set_day_text()
+		day_text_fade()
+
+
+func day_text_fade():
+	animPlayer.play("day_text_fade_in")
+	await get_tree().create_timer(3).timeout
+	animPlayer.play("day_text_fade_out")
 
 
 func set_day_text():

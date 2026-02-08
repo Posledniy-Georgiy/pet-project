@@ -1,3 +1,5 @@
 res://level.tscn
 res://level.gd
-res://player.gd
+res://mushroom.tscn
+res://mushroom.gd
+res://player.tscn
