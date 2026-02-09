@@ -599,7 +599,7 @@ layer_0/tile_data = PackedInt32Array(2359296, 131072, 2, 2424832, 131072, 2, 249
 [node name="mobs" type="Node2D" parent="." unique_id=454714043]
 
 [node name="mushroom" parent="mobs" unique_id=153067379 instance=ExtResource("8_i2t4f")]
-position = Vector2(421, 482)
+position = Vector2(369, 490)
 
 [node name="player" type="Node2D" parent="." unique_id=1322294072]
 
@@ -647,7 +647,7 @@ autostart = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=475247908]
 enabled = false
-energy = 0.95
+energy = 0.8
 blend_mode = 1
 range_layer_min = -1
 

@@ -19,6 +19,10 @@ run/main_scene="uid://c2vsxpfxfgwey"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Signals="*uid://d7byci20ld86"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/AS2P/plugin.cfg")
