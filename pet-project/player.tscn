@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dxlkaglugqy1h" path="res://textures/blue/char_blue_1.png" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://ckgbj15fw6moa" path="res://textures/blue/char_blue_2.png" id="3_sweqy"]
 [ext_resource type="Texture2D" uid="uid://cydoab82jh2hv" path="res://textures/decorations/circle.png" id="5_sweqy"]
+[ext_resource type="PackedScene" uid="uid://bgrladiqvayym" path="res://damage_box.tscn" id="6_2hs0m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sh265"]
 
@@ -1021,13 +1022,13 @@ collision_layer = 2
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1524672844]
+visible = false
 shape = SubResource("CapsuleShape2D_sh265")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1306113656]
 position = Vector2(2, -15)
 sprite_frames = SubResource("SpriteFrames_4flbx")
 animation = &"attack"
-autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1365538400]
 zoom = Vector2(2.4, 2.4)
@@ -1049,3 +1050,23 @@ texture = ExtResource("5_sweqy")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=254862929]
 occluder = SubResource("OccluderPolygon2D_sweqy")
+
+[node name="AttackDirection" type="Node2D" parent="." unique_id=535983173]
+
+[node name="DamageBox" parent="AttackDirection" unique_id=152206489 instance=ExtResource("6_2hs0m")]
+
+[node name="HurtBox" parent="AttackDirection/DamageBox" index="0" unique_id=1441380633]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="AttackDirection/DamageBox/HurtBox" index="0" unique_id=1669950524]
+position = Vector2(1, 0)
+
+[node name="HitBox" parent="AttackDirection/DamageBox" index="1" unique_id=234333986]
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" parent="AttackDirection/DamageBox/HitBox" index="0" unique_id=705721789]
+position = Vector2(19, -3)
+
+[editable path="AttackDirection/DamageBox"]

@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://fxlh6p2b1401" path="res://textures/oak_woods_tileset.png" id="5_km5ld"]
 [ext_resource type="PackedScene" uid="uid://b4s1053jlnk1f" path="res://mushroom.tscn" id="8_i2t4f"]
 [ext_resource type="Texture2D" uid="uid://cydoab82jh2hv" path="res://textures/decorations/circle.png" id="8_km5ld"]
+[ext_resource type="Texture2D" uid="uid://bhpijgm6lpdrc" path="res://textures/Sprite-0003.png" id="9_aicyk"]
+[ext_resource type="Texture2D" uid="uid://dtu8kvdilrguw" path="res://textures/Sprite-0001.png" id="10_8b0r0"]
+[ext_resource type="Texture2D" uid="uid://80qgmar2r2da" path="res://textures/Sprite-0002.png" id="11_h6smj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2t4f"]
 texture = ExtResource("5_km5ld")
@@ -455,34 +458,6 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_i2t4f")
 
-[sub_resource type="GDScript" id="GDScript_1ainy"]
-script/source = "extends Label
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	text = \"HP: \" + str($\"../../player/player\".health)
-"
-
-[sub_resource type="GDScript" id="GDScript_n6hdu"]
-script/source = "extends Label
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	text = \"gold: \" + str($\"../../player/player\".gold)
-"
-
 [sub_resource type="Animation" id="Animation_km5ld"]
 length = 0.001
 tracks/0/type = "value"
@@ -599,32 +574,14 @@ layer_0/tile_data = PackedInt32Array(2359296, 131072, 2, 2424832, 131072, 2, 249
 [node name="mobs" type="Node2D" parent="." unique_id=454714043]
 
 [node name="mushroom" parent="mobs" unique_id=153067379 instance=ExtResource("8_i2t4f")]
-position = Vector2(369, 490)
+position = Vector2(268, 489)
 
 [node name="player" type="Node2D" parent="." unique_id=1322294072]
 
 [node name="player" parent="player" unique_id=1276501645 instance=ExtResource("1_u52ul")]
-position = Vector2(178, 491)
+position = Vector2(405, 492)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=324012084]
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=683132369]
-offset_left = 33.0
-offset_top = 31.0
-offset_right = 89.0
-offset_bottom = 73.0
-theme_override_font_sizes/font_size = 30
-text = "HP"
-script = SubResource("GDScript_1ainy")
-
-[node name="Label2" type="Label" parent="CanvasLayer" unique_id=633530574]
-offset_left = 35.0
-offset_top = 71.0
-offset_right = 89.0
-offset_bottom = 108.0
-theme_override_font_sizes/font_size = 30
-text = "gold"
-script = SubResource("GDScript_n6hdu")
 
 [node name="DayText" type="Label" parent="CanvasLayer" unique_id=1975185363]
 modulate = Color(1, 1, 1, 0)
@@ -637,6 +594,18 @@ text = "DAY - 1"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=702996748]
 libraries/ = SubResource("AnimationLibrary_2orkt")
+
+[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1157209292]
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 198.0
+offset_bottom = 53.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("9_aicyk")
+texture_over = ExtResource("10_8b0r0")
+texture_progress = ExtResource("11_h6smj")
+tint_progress = Color(1, 0, 0, 1)
 
 [node name="lut" type="Node2D" parent="." unique_id=1505340269]
 script = SubResource("GDScript_km5ld")
@@ -666,4 +635,5 @@ texture = ExtResource("8_km5ld")
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1400385820]
 occluder = SubResource("OccluderPolygon2D_km5ld")
 
+[connection signal="health_changed" from="player/player" to="." method="_on_player_health_changed"]
 [connection signal="timeout" from="DayNight" to="." method="_on_day_night_timeout"]
