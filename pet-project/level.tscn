@@ -615,7 +615,6 @@ wait_time = 3.0
 autostart = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=475247908]
-enabled = false
 energy = 0.8
 blend_mode = 1
 range_layer_min = -1

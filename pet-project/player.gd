@@ -123,6 +123,7 @@ func death_state():
 	velocity.x = 0
 	anim.play("death")
 	queue_free()
+	await animPlayer.animation_finished
 	get_tree().change_scene_to_file.bind("res://menu.tscn").call_deferred()
 
 
@@ -172,6 +173,12 @@ func damage_state():
 
 
 func _on_damage_received (enemy_damage):
+	if state == BLOCK:
+		enemy_damage /= 2
+	elif state == SLIDE:
+		enemy_damage = 0
+	else:
+		state = DAMAGE
 	health -= enemy_damage
 	if health <= 0:
 		health = 0

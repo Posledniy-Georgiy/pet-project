@@ -1,10 +1,2 @@
-res://damage_box.tscn
-res://player.tscn
-res://mushroom.tscn
-res://signals.gd
-res://mushroom.gd
-res://player.gd
 res://level.tscn
-res://damage_box.gd
-res://menu.tscn
-res://level.gd
+res://player.gd
