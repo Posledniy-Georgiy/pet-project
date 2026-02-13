@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770848773
+::res://::1770997847
 bG.gd::GDScript::9187485916372710519::1770069930::0::1::::<>ParallaxBackground<><>0<>0<><>::
 bg.tscn::PackedScene::6830551770268178598::1770069930::0::1::::<><><>0<>0<><>::uid://cpw0uddvnvbqa::::res://textures/background/background_layer_1.png<>uid://d35qsywb5nqgd::::res://bG.gd<>uid://cru156kypc2n6::::res://textures/background/background_layer_2.png<>uid://6i6kjejakvi1::::res://textures/background/background_layer_3.png
 damage_box.gd::GDScript::1239308845936130517::1770753838::0::1::::<>Node2D<><>0<>0<><>::
@@ -8,12 +8,12 @@ gold.gd::GDScript::244699171426334798::1770069930::0::1::::<>Area2D<><>0<>0<><>:
 gold.tscn::PackedScene::7712906049502244774::1770069930::0::1::::<><><>0<>0<><>::uid://dqsforaorftm::::res://gold.gd<>uid://lkmy7s6jqgqa::::res://textures/MonedaD.png
 icon.svg::CompressedTexture2D::9078742994855788999::1770069930::1770070078::1::::<><><>0<>0<>b7139f381430db067fb3e7531ef18de2<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 level.gd::GDScript::8347290261157302813::1770754796::0::1::::<>Node2D<><>0<>0<><>::
-level.tscn::PackedScene::7997277319850150709::1770754852::0::1::::<><><>0<>0<><>::uid://dq6qweu0nsctp::::res://level.gd<>uid://f32sbak56xdh::::res://player.tscn<>uid://cpw0uddvnvbqa::::res://textures/background/background_layer_1.png<>uid://cru156kypc2n6::::res://textures/background/background_layer_2.png<>uid://bfpp6f7x7v4fv::::res://build/shop.tscn<>uid://6i6kjejakvi1::::res://textures/background/background_layer_3.png<>uid://fxlh6p2b1401::::res://textures/oak_woods_tileset.png<>uid://b4s1053jlnk1f::::res://mushroom.tscn<>uid://cydoab82jh2hv::::res://textures/decorations/circle.png<>uid://bhpijgm6lpdrc::::res://textures/Sprite-0003.png<>uid://dtu8kvdilrguw::::res://textures/Sprite-0001.png<>uid://80qgmar2r2da::::res://textures/Sprite-0002.png
+level.tscn::PackedScene::7997277319850150709::1770854078::0::1::::<><><>0<>0<><>::uid://dq6qweu0nsctp::::res://level.gd<>uid://f32sbak56xdh::::res://player.tscn<>uid://cpw0uddvnvbqa::::res://textures/background/background_layer_1.png<>uid://cru156kypc2n6::::res://textures/background/background_layer_2.png<>uid://bfpp6f7x7v4fv::::res://build/shop.tscn<>uid://6i6kjejakvi1::::res://textures/background/background_layer_3.png<>uid://fxlh6p2b1401::::res://textures/oak_woods_tileset.png<>uid://b4s1053jlnk1f::::res://mushroom.tscn<>uid://cydoab82jh2hv::::res://textures/decorations/circle.png<>uid://bhpijgm6lpdrc::::res://textures/Sprite-0003.png<>uid://dtu8kvdilrguw::::res://textures/Sprite-0001.png<>uid://80qgmar2r2da::::res://textures/Sprite-0002.png
 menu.gd::GDScript::1132138547834836150::1770069930::0::1::::<>Node2D<><>0<>0<><>::
 menu.tscn::PackedScene::6712426854204172824::1770753883::0::1::::<><><>0<>0<><>::uid://qeofk5du4o43::::res://menu.gd<>uid://c4k1gpj8hwb6e::::res://bg.tscn
 mushroom.gd::GDScript::7255309200283567138::1770750799::0::1::::<>CharacterBody2D<><>0<>0<><>::
 mushroom.tscn::PackedScene::4460680854807836505::1770753757::0::1::::<><><>0<>0<><>::uid://bxs8aln55w3km::::res://textures/Mushroom/Attack.png<>uid://dbmr5agmg7i2m::::res://mushroom.gd<>uid://dl4aupr4ps6m7::::res://textures/Mushroom/Take Hit.png<>uid://noqxkgymhrup::::res://textures/Mushroom/Death.png<>uid://4seir1aujqb1::::res://textures/Mushroom/Idle.png<>uid://ci7nv5fehdvpa::::res://textures/Mushroom/Run.png<>uid://bgrladiqvayym::::res://damage_box.tscn
-player.gd::GDScript::4374650095076817475::1770754852::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::4374650095076817475::1770853687::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene::410418351417857889::1770753413::0::1::::<><><>0<>0<><>::uid://einl6ojnvs1m::::res://textures/character/char_blue.png<>uid://b3ld33gyctnn4::::res://player.gd<>uid://dxlkaglugqy1h::::res://textures/blue/char_blue_1.png<>uid://ckgbj15fw6moa::::res://textures/blue/char_blue_2.png<>uid://cydoab82jh2hv::::res://textures/decorations/circle.png<>uid://bgrladiqvayym::::res://damage_box.tscn
 signals.gd::GDScript::276730313756231381::1770748917::0::1::::<>Node<><>0<>0<><>::
 skelet.gd::GDScript::7581081757121099899::1770069930::0::1::::<>CharacterBody2D<><>0<>0<><>::

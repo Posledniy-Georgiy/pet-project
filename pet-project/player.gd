@@ -123,7 +123,6 @@ func death_state():
 	velocity.x = 0
 	anim.play("death")
 	queue_free()
-	await animPlayer.animation_finished
 	get_tree().change_scene_to_file.bind("res://menu.tscn").call_deferred()
 
 
