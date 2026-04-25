@@ -186,3 +186,4 @@ func _on_damage_received (enemy_damage):
 		state = DAMAGE
 	emit_signal("health_changed", health)
 	print(health)
+#проверка связи линукса с гитом
